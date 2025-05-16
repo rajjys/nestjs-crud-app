@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Patch, Req, UseGuards } from '@nestjs/common';
-import { User } from 'generated/prisma';
+import { User } from '@prisma/client';
 import { GetUser } from 'src/auth/decorator/';
 import { EditUserDto } from 'src/auth/dto';
 import { JwtGuard } from 'src/auth/guard';
@@ -13,7 +13,9 @@ export class UserController {
 
     @Get('me')
     getMe(@GetUser() user: User){
-        return user;
+        //remove the hash
+        const {hash, ...userWithoutHash} = user;
+        return userWithoutHash;
     }
 
     @Patch()

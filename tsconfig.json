@@ -17,6 +17,15 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "noFallthroughCasesInSwitch": false,
-    "allowJs": true
-  }
+    "allowJs": true,
+    "esModuleInterop": true,  // Fix ESM imports
+    "moduleResolution": "node",  // Required for Prisma
+    "strict": true  // Recommended for NestJS
+  },
+  "exclude": [
+    "node_modules",
+    "generated/prisma",
+    "frontend",
+    "dist"
+  ]
 }
