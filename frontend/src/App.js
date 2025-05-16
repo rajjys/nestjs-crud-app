@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import AuthForm from "./components/AuthForm";
+import Profile from "./components/Profile";
+import Bookmarks from "./components/Bookmarks";
 
 function App() {
+  const [token, setToken] = useState(localStorage.getItem("token") || "");
+
+  function handleSetToken(t) {
+    setToken(t);
+    localStorage.setItem("token", t);
+  }
+
+  function handleLogout() {
+    setToken("");
+    localStorage.removeItem("token");
+  }
+
+  if (!token) return <AuthForm setToken={handleSetToken} />;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ maxWidth: 600, margin: "40px auto" }}>
+      <Profile token={token} handleLogout={handleLogout}/>
+      <Bookmarks token={token} />
     </div>
   );
 }

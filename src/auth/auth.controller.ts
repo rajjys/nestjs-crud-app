@@ -7,6 +7,7 @@ export class AuthController{
     constructor(private authService: AuthService){}
     @Post("signup")
     signup(@Body() dto: AuthDto){
+        console.log(dto);
        return this.authService.signup(dto);
     }
  @HttpCode(HttpStatus.OK)
@@ -14,10 +15,5 @@ export class AuthController{
     signIn(@Body() dto: AuthDto){
         ///find user by email
         return this.authService.signin(dto);
-    }
-   
-    @Post("login")
-    login(){
-        return this.authService.login();
     }
 }

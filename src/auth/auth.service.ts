@@ -8,9 +8,6 @@ import { JwtService } from "@nestjs/jwt";
 @Injectable()
 export class AuthService {
     constructor(private prisma: PrismaService, private jwt: JwtService){}
-    login() {
-        return {message:"I am at the login endpoint"};
-    }
     async signin(dto: AuthDto) {
         ///find user by email
         const user = await this.prisma.user.findUnique({
@@ -39,6 +36,8 @@ export class AuthService {
          const user = await this.prisma.user.create({
             data: {
             email: dto.email,
+            firstName: dto.firstname,
+            lastName: dto.lastname,
             hash: hashedPassword,
         }  
           } );

@@ -1,0 +1,245 @@
+// Shared Styles
+export const styles = {
+  container: {
+    backgroundColor: "#fff",
+    borderRadius: "12px",
+    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
+    padding: "2rem",
+    margin: "1rem 0",
+  },
+  title: {
+    fontSize: "1.5rem",
+    fontWeight: "600",
+    marginBottom: "1.5rem",
+    color: "#1a1a1a",
+  },
+  form: {
+    marginBottom: "2rem",
+  },
+  inputGroup: {
+    marginBottom: "1rem",
+  },
+  input: {
+    width: "100%",
+    padding: "0.75rem",
+    border: "1px solid #ddd",
+    borderRadius: "6px",
+    fontSize: "1rem",
+    transition: "border-color 0.3s ease",
+    ":focus": {
+      borderColor: "#1877f2",
+      outline: "none",
+    },
+  },
+  inputGrid: {
+    display: "grid",
+    gap: "1rem",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+  },
+  buttonGroup: {
+    display: "flex",
+    gap: "1rem",
+    marginTop: "1rem",
+  },
+  primaryButton: {
+    backgroundColor: "#1877f2",
+    color: "#fff",
+    padding: "0.75rem 1.5rem",
+    border: "none",
+    borderRadius: "6px",
+    cursor: "pointer",
+    fontSize: "1rem",
+    fontWeight: "500",
+    transition: "background-color 0.3s ease",
+    ":hover": {
+      backgroundColor: "#166fe5",
+    },
+  },
+  secondaryButton: {
+    backgroundColor: "#e4e6eb",
+    color: "#1a1a1a",
+    padding: "0.75rem 1.5rem",
+    border: "none",
+    borderRadius: "6px",
+    cursor: "pointer",
+    fontSize: "1rem",
+    fontWeight: "500",
+    transition: "background-color 0.3s ease",
+    ":hover": {
+      backgroundColor: "#d8dade",
+    },
+  },
+  errorText: {
+    color: "#ff4444",
+    fontSize: "0.875rem",
+    marginTop: "0.25rem",
+    display: "block",
+  },
+  error: {
+    backgroundColor: "#ffebee",
+    color: "#ff4444",
+    padding: "1rem",
+    borderRadius: "6px",
+    marginBottom: "1rem",
+  },
+  success: {
+    color: "#00C851",
+    backgroundColor: "#e8f5e9",
+    padding: "1rem",
+    borderRadius: "6px",
+    marginBottom: "1rem",
+  },
+  bookmarkList: {
+    display: "grid",
+    gap: "1rem",
+  },
+  bookmarkCard: {
+    display: "flex",
+    backgroundColor: "#fff",
+    borderRadius: "8px",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+    marginBottom: "1rem",
+    overflow: "hidden",
+    position: "relative",
+    transition: "transform 0.2s",
+    ":hover": {
+      transform: "translateY(-2px)",
+    },
+  },
+  bookmarkHeader: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: "0.5rem",
+  },
+  bookmarkTitle: {
+    margin: "0",
+    fontSize: "1.125rem",
+    fontWeight: "500",
+  },
+  bookmarkLink: {
+    display: "flex",
+    flexGrow: 1,
+    textDecoration: "none",
+    color: "inherit",
+  },
+  bookmarkDescription: {
+    color: "#65676b",
+    margin: "0",
+    fontSize: "0.875rem",
+  },
+  bookmarkActions: {
+    marginTop: "2rem",
+    display: "flex",
+    gap: "1rem",
+    justifyContent: "flex-end",
+  },
+  button: {
+    padding: "0.5rem 1rem",
+    borderRadius: "4px",
+    border: "none",
+    cursor: "pointer",
+    transition: "background-color 0.2s",
+  },
+
+  loading: {
+    textAlign: "center",
+    color: "#65676b",
+    padding: "2rem",
+  },
+  infoRow: {
+    display: "flex",
+    justifyContent: "space-between",
+    marginBottom: "1rem",
+    padding: "0.5rem 0",
+    borderBottom: "1px solid #eee",
+  },
+  infoLabel: {
+    fontWeight: "500",
+    color: "#65676b",
+  },
+  infoValue: {
+    color: "#1a1a1a",
+  },
+  editButton: {
+    backgroundColor: "#e4e6eb",
+    color: "#1a1a1a",
+    ":hover": {
+      backgroundColor: "#d8dade",
+    },
+  },
+   
+  deleteButton: {
+    backgroundColor: "#ffebee",
+    color: "#ff4444",
+    ":hover": {
+      backgroundColor: "#ffdde0",
+    },
+  },
+  authContainer: {
+    backgroundColor: "#fff",
+    borderRadius: "12px",
+    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
+    padding: "2rem",
+    margin: "1rem 0",
+    maxWidth: "450px",
+  },
+  profileHeader: {
+    display: "flex",
+    alignItems: "center",
+    padding: "1.5rem",
+    backgroundColor: "#f0f2f5",
+    borderRadius: "12px",
+    marginBottom: "1rem",
+    position: "relative",
+  },
+  profileAvatar: {
+    width: "60px",
+    height: "60px",
+    borderRadius: "50%",
+    backgroundColor: "#e4e6eb",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "24px",
+    color: "#1877f2",
+    marginRight: "1rem",
+  },
+  profileInfo: {
+    
+  },
+  profileName: {
+    fontSize: "1.25rem",
+    fontWeight: "600",
+    marginBottom: "0.25rem",
+  },
+  profileEmail: {
+    color: "#65676b",
+    fontSize: "0.875rem",
+  },
+  profileActions: {
+    position: "absolute",
+    right: "1.5rem",
+    top: "1.5rem",
+    display: "flex",
+    gap: "1rem",
+  },
+  thumbnail: {
+    width: "20%",
+    minWidth: "200px",
+    backgroundColor: "#e4e6eb",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "24px",
+  },
+  content: {
+    padding: "1.5rem",
+    flexGrow: 1,
+  },
+  urlValidation: {
+    color: "#ff4444",
+    fontSize: "0.875rem",
+    marginTop: "0.25rem",
+  },
+};
