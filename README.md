@@ -17,13 +17,13 @@ A full-stack application built with **NestJS** (backend) and **React** (frontend
 ## Screenshots
 
 ### Login Screen
-![Login Screen](frontend/public/snap-1.jpg)
+![Login Screen](/frontend/public/snap-1.jpg)
 
 ### Signup Screen
-![Signup Screen](frontend/public/snap-2.jpg)
+![Signup Screen](/frontend/public/snap-2.jpg)
 
 ### Main Page (Bookmarks & Profile)
-![Main Page](frontend/public/snap-3.jpg)
+![Main Page](/frontend/public/snap-3.jpg)
 
 ---
 
